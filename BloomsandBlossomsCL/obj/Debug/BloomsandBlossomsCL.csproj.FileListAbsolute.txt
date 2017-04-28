@@ -1,0 +1,13 @@
+E:\Samdoss\Bloom-And-Blossoms\floweristinchennai\BloomsandBlossoms\BloomsandBlossomsCL\bin\Debug\BloomsandBlossomsCL.dll
+E:\Samdoss\Bloom-And-Blossoms\floweristinchennai\BloomsandBlossoms\BloomsandBlossomsCL\bin\Debug\BloomsandBlossomsCL.pdb
+E:\Samdoss\Bloom-And-Blossoms\floweristinchennai\BloomsandBlossoms\BloomsandBlossomsCL\obj\Debug\BloomsandBlossomsCL.csprojResolveAssemblyReference.cache
+E:\Samdoss\Bloom-And-Blossoms\floweristinchennai\BloomsandBlossoms\BloomsandBlossomsCL\obj\Debug\BloomsandBlossomsCL.dll
+E:\Samdoss\Bloom-And-Blossoms\floweristinchennai\BloomsandBlossoms\BloomsandBlossomsCL\obj\Debug\BloomsandBlossomsCL.pdb
+D:\project\BloomsandBlossoms\BloomsandBlossoms\BloomsandBlossomsCL\bin\Debug\BloomsandBlossomsCL.dll
+D:\project\BloomsandBlossoms\BloomsandBlossoms\BloomsandBlossomsCL\bin\Debug\BloomsandBlossomsCL.pdb
+D:\project\BloomsandBlossoms\BloomsandBlossoms\BloomsandBlossomsCL\obj\Debug\BloomsandBlossomsCL.dll
+D:\project\BloomsandBlossoms\BloomsandBlossoms\BloomsandBlossomsCL\obj\Debug\BloomsandBlossomsCL.pdb
+D:\project\BloomsandBlossoms\BloomsandBlossoms\BloomsandBlossomsCL\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\project\BloomsandBlossoms\BloomsandBlossoms\BloomsandBlossomsCL\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\project\BloomsandBlossoms\BloomsandBlossoms\BloomsandBlossomsCL\bin\Debug\Microsoft.Practices.ObjectBuilder.dll
+D:\project\BloomsandBlossoms\BloomsandBlossoms\BloomsandBlossomsCL\obj\Debug\BloomsandBlossomsCL.csprojResolveAssemblyReference.cache
