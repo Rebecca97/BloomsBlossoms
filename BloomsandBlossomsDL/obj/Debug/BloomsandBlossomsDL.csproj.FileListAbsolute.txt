@@ -13,3 +13,13 @@ D:\project\BloomsandBlossoms\BloomsandBlossoms\BloomsandBlossomsDL\bin\Debug\Mic
 D:\project\BloomsandBlossoms\BloomsandBlossoms\BloomsandBlossomsDL\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
 D:\project\BloomsandBlossoms\BloomsandBlossoms\BloomsandBlossomsDL\bin\Debug\Microsoft.Practices.ObjectBuilder.dll
 D:\project\BloomsandBlossoms\BloomsandBlossoms\BloomsandBlossomsDL\bin\Debug\BloomsandBlossomsCL.pdb
+D:\GIT\BloomsBlossoms\BloomsandBlossomsDL\bin\Debug\BloomsandBlossomsDL.dll
+D:\GIT\BloomsBlossoms\BloomsandBlossomsDL\bin\Debug\BloomsandBlossomsDL.pdb
+D:\GIT\BloomsBlossoms\BloomsandBlossomsDL\bin\Debug\BloomsandBlossomsCL.dll
+D:\GIT\BloomsBlossoms\BloomsandBlossomsDL\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\GIT\BloomsBlossoms\BloomsandBlossomsDL\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\GIT\BloomsBlossoms\BloomsandBlossomsDL\bin\Debug\Microsoft.Practices.ObjectBuilder.dll
+D:\GIT\BloomsBlossoms\BloomsandBlossomsDL\bin\Debug\BloomsandBlossomsCL.pdb
+D:\GIT\BloomsBlossoms\BloomsandBlossomsDL\obj\Debug\BloomsandBlossomsDL.csprojResolveAssemblyReference.cache
+D:\GIT\BloomsBlossoms\BloomsandBlossomsDL\obj\Debug\BloomsandBlossomsDL.dll
+D:\GIT\BloomsBlossoms\BloomsandBlossomsDL\obj\Debug\BloomsandBlossomsDL.pdb
