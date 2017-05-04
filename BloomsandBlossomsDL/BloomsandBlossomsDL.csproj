@@ -56,6 +56,7 @@
     <Compile Include="AddressDL.cs" />
     <Compile Include="CartDL.cs" />
     <Compile Include="CompanyInformationDL.cs" />
+    <Compile Include="ContactUsDL.cs" />
     <Compile Include="DescriptionDL.cs" />
     <Compile Include="PaymentDL.cs" />
     <Compile Include="ProductDL.cs" />
