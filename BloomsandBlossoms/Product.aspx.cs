@@ -15,8 +15,18 @@ namespace BloomsandBlossoms
             if(!IsPostBack)
             {
                 ProductDL objDL = new ProductDL();
-                dlProduct.DataSource = objDL.GetProductWithDetails();
-                dlProduct.DataBind();
+                string strvalue = Request.QueryString["Category"];
+                if (!string.IsNullOrEmpty(strvalue))
+                {
+                    
+                    dlProduct.DataSource = objDL.GetProductWithDetails(Convert.ToInt32(strvalue));
+                    dlProduct.DataBind();
+                }
+                else
+                {
+                    dlProduct.DataSource = objDL.GetProductWithDetails(Convert.ToInt32(0));
+                    dlProduct.DataBind();
+                }
             }
         }
 

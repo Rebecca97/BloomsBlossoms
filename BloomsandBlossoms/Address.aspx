@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="Address" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="Address.aspx.cs" Inherits="BloomsandBlossoms.Address" %>
+<%@ Register src="UserControl/footer.ascx" tagname="footer" tagprefix="uc1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
     <style type="text/css">
         .auto-style1 {
@@ -12,7 +13,7 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="mainpageholder" runat="server">
-<div id="contact-page" class="container">
+    <div id="contact-page" class="container">
         <div class="bg">
             
                     <div class="row">
@@ -56,5 +57,5 @@
         </div>
     </div>
 
-</asp:Content>
+    </asp:Content>
 

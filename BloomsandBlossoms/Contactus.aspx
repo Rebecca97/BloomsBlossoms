@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="ContactUs.aspx.cs" Inherits="BloomsandBlossoms.ContactUs" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="mainpageholder" runat="server">
@@ -34,4 +35,4 @@
                     </div>
          </div>
         </div>
-</asp:Content>
+    </asp:Content>

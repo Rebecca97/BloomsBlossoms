@@ -19,14 +19,15 @@ namespace BloomsandBlossomsDL
 
         }
         #endregion
-        public DataSet GetProductWithDetails()
+        public DataSet GetProductWithDetails(int categoryID)
         {
             DataSet ds = new DataSet();
             try
             {
                 Database db = DatabaseFactory.CreateDatabase(_myConnection.DatabaseName);
-                DbCommand dbCommand = db.GetStoredProcCommand("spProductInfo");
+                DbCommand dbCommand = db.GetStoredProcCommand("spGetProductInfo");
                 dbCommand.Parameters.Clear();
+                db.AddInParameter(dbCommand, "ProductCategoryID", DbType.Int32, categoryID);
                 dbCommand.CommandTimeout = 300;
                 ds = db.ExecuteDataSet(dbCommand);
             }

@@ -108,7 +108,6 @@
     <Content Include="Address.aspx" />
     <Content Include="Cart.aspx" />
     <Content Include="CompanyInformation.aspx" />
-    <Content Include="Contact.aspx" />
     <Content Include="ContactUs.aspx" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
@@ -254,10 +253,50 @@
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Payment.aspx" />
     <Content Include="Product.aspx" />
+    <Content Include="productImages\A1.png" />
+    <Content Include="productImages\A2.png" />
+    <Content Include="productImages\A3.png" />
+    <Content Include="productImages\A4.png" />
+    <Content Include="productImages\A5.png" />
+    <Content Include="productImages\BD1.png" />
+    <Content Include="productImages\BD2.png" />
+    <Content Include="productImages\BD3.png" />
+    <Content Include="productImages\BD4.png" />
+    <Content Include="productImages\BD5.png" />
+    <Content Include="productImages\F1.png" />
+    <Content Include="productImages\F2.png" />
+    <Content Include="productImages\F3.png" />
+    <Content Include="productImages\F4.png" />
+    <Content Include="productImages\F5.png" />
+    <Content Include="productImages\G1.png" />
+    <Content Include="productImages\G2.png" />
+    <Content Include="productImages\G3.png" />
+    <Content Include="productImages\G4.png" />
+    <Content Include="productImages\G5.png" />
     <Content Include="productImages\lily.png" />
     <Content Include="productImages\mixgarland.png" />
+    <Content Include="productImages\N1.png" />
+    <Content Include="productImages\N2.png" />
+    <Content Include="productImages\N3.png" />
+    <Content Include="productImages\N4.png" />
+    <Content Include="productImages\N5.png" />
+    <Content Include="productImages\R1.png" />
+    <Content Include="productImages\R2.png" />
+    <Content Include="productImages\R3.png" />
+    <Content Include="productImages\R4.png" />
+    <Content Include="productImages\R5.png" />
     <Content Include="productImages\rose.png" />
     <Content Include="productImages\rosewreath.png" />
+    <Content Include="productImages\S1.png" />
+    <Content Include="productImages\S2.png" />
+    <Content Include="productImages\S3.png" />
+    <Content Include="productImages\S4.png" />
+    <Content Include="productImages\S5.png" />
+    <Content Include="productImages\W1.png" />
+    <Content Include="productImages\W2.png" />
+    <Content Include="productImages\W3.png" />
+    <Content Include="productImages\W4.png" />
+    <Content Include="productImages\W5.png" />
     <Content Include="productImages\wedgarland.png" />
     <Content Include="Register.aspx" />
     <Content Include="Scripts\jquery-1.8.2.js" />
@@ -320,13 +359,6 @@
     </Compile>
     <Compile Include="CompanyInformation.aspx.designer.cs">
       <DependentUpon>CompanyInformation.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Contact.aspx.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Contact.aspx.designer.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
     <Compile Include="ContactUs.aspx.cs">
       <DependentUpon>ContactUs.aspx</DependentUpon>
