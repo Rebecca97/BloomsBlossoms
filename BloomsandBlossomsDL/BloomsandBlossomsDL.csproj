@@ -55,14 +55,19 @@
   <ItemGroup>
     <Compile Include="AddressDL.cs" />
     <Compile Include="CartDL.cs" />
+    <Compile Include="CartNewDL.cs" />
     <Compile Include="CompanyInformationDL.cs" />
     <Compile Include="ContactUsDL.cs" />
+    <Compile Include="CorporateDL.cs" />
     <Compile Include="DefaultDL.cs" />
     <Compile Include="DescriptionDL.cs" />
+    <Compile Include="HotelDL.cs" />
     <Compile Include="PaymentDL.cs" />
+    <Compile Include="PaymentRequestDL.cs" />
     <Compile Include="ProductDL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserAccount\UserDL.cs" />
+    <Compile Include="WeddingDL.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BloomsandBlossomsCL\BloomsandBlossomsCL.csproj">

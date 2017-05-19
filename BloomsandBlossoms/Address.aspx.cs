@@ -11,17 +11,37 @@ namespace BloomsandBlossoms
 {
     public partial class Address : System.Web.UI.Page
     {
+        AddressDL addressObj = new AddressDL();
+        
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
-               
+                if (Session["UserIDValue"] == null)
+                {
+                    Response.Redirect("~/Signin.aspx");
+                }
+
+
+                string sessionUserIDValue = Session["UserIDValue"].ToString();
+
+                addressObj.GetAddressDetailsByUserID(Convert.ToInt32(sessionUserIDValue));
+
+                txtName.Text = addressObj.ContactName;
+                txtAddress1.Text = addressObj.Address1;
+                txtAddress2.Text = addressObj.Address2;
+                txtCity.Text = addressObj.City;
+                txtState.Text = addressObj.State;
+                txtCountry.Text = addressObj.Country;
+                txtPin.Text = addressObj.Pincode;
+                txtNote.Text= addressObj.Note;
+
             }
         }
 
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
-            AddressDL addressObj = new AddressDL();
+         
             if (hfAddressID.Value == "0")
             {
                 addressObj.AddressID = 0;
@@ -32,7 +52,8 @@ namespace BloomsandBlossoms
                 addressObj.AddressID = Convert.ToInt32(hfAddressID.Value);
                 addressObj.AddEditOption = 1;
             }
-            addressObj.UserID = 2;
+            string sessionUserIDValue = Session["UserIDValue"].ToString();
+            addressObj.UserID = Convert.ToInt32(sessionUserIDValue);
             addressObj.ContactName = txtName.Text;
             addressObj.Address1 = txtAddress1.Text;
             addressObj.Address2 = txtAddress2.Text;
@@ -47,16 +68,18 @@ namespace BloomsandBlossoms
             addressObj.ScreenMode = ScreenMode.Add;
             result = addressObj.Commit();
             hfAddressID.Value = addressObj.AddressID.ToString();
-            //// Display the Status - Whether successfully saved or not
-            //System.Text.StringBuilder sb = new System.Text.StringBuilder();
-            //sb.Append("<script>alert('" + "confirmation mail sent to your emailid" + ".');");
-            //sb.Append("</script>");
+
+            
+
 
             // If successful
             if (result.Status == TransactionStatus.Success)
             {
                 //MultiView1.ActiveViewIndex = 1;
+               
             }
+            Response.Redirect("~/Payment.aspx");
+
         }
     }
 }

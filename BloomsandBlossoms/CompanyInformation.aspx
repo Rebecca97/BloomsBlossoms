@@ -12,37 +12,48 @@
                                 <div class="status alert alert-success" style="display: none"></div>
                                 <asp:HiddenField ID="hfAddressID" runat="server" Value="0" />
                                 <div class="form-group col-md-12">
+                                    <h4>Company Name:</h4>
                                     <asp:TextBox ID="txtName" runat="server" class="form-control" required="required" placeholder="Company Name"></asp:TextBox>
                                 </div>
                                 <div class="form-group col-md-12">
+                                    <h4>Address:</h4>
                                     <asp:TextBox ID="txtAddress" runat="server" class="form-control" required="required" placeholder="Address"></asp:TextBox>
                                 </div>
                                 <div class="form-group col-md-12">
+                                    <h4>State:</h4>
                                     <asp:TextBox ID="txtState" runat="server" required="required" class="form-control" placeholder="State"></asp:TextBox>
                                 </div>
                                 <div class="form-group col-md-12">
+                                    <h4>Country:</h4>
                                     <asp:TextBox ID="txtCountry" runat="server" required="required" class="form-control" placeholder="Country"></asp:TextBox>
                                 </div>
                                  <div class="form-group col-md-12">
+                                     <h4>Pin Code:</h4>
                                     <asp:TextBox ID="txtPin" runat="server" required="required" class="form-control" placeholder="Pin Code"></asp:TextBox>
                                 </div>
                                 <div class="form-group col-md-12">
+                                    <h4>Phone Number:</h4>
                                     <asp:TextBox ID="txtPhone" runat="server" class="form-control" required="required" placeholder="Phone Number"></asp:TextBox>
                                 </div>
                                  <div class="form-group col-md-12">
+                                     <h4>Email ID</h4>
                                     <asp:TextBox ID="txtEmail" runat="server" required="required" class="form-control" placeholder="Email ID"></asp:TextBox>
                                 </div>
                              
                                  <div class="form-group col-md-12">
+                                     <h4>Service Tax Amount:</h4>
                                     <asp:TextBox ID="txtServiceTax" runat="server" required="required" class="form-control" placeholder="Service Tax Amount"></asp:TextBox>
                                 </div>
                                 <div class="form-group col-md-12">
+                                    <h4>TIN Number:</h4>
                                     <asp:TextBox ID="txtTinNo" runat="server" required="required" class="form-control" placeholder="TIN Number"></asp:TextBox>
                                 </div>
                                 <div class="form-group col-md-12">
+                                    <h4>Website URL:</h4>
                                     <asp:TextBox ID="txtWebsite" runat="server" required="required" class="form-control" placeholder="Website"></asp:TextBox>
                                 </div>
                                 <div class="form-group col-md-12">
+                                    <h4>Logo:</h4>
                                     <asp:TextBox ID="txtLogo" runat="server" required="required" class="form-control" placeholder="Logo"></asp:TextBox>
                                 </div>
                                    </div>

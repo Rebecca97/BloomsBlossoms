@@ -22,6 +22,15 @@ namespace BloomsandBlossoms {
         protected global::System.Web.UI.WebControls.Image imgproductpicture;
         
         /// <summary>
+        /// hfCartID control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hfCartID;
+        
+        /// <summary>
         /// productname control.
         /// </summary>
         /// <remarks>
@@ -56,6 +65,24 @@ namespace BloomsandBlossoms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label productprice;
+        
+        /// <summary>
+        /// txtQuantity control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtQuantity;
+        
+        /// <summary>
+        /// btnAddCart control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnAddCart;
         
         /// <summary>
         /// productavailibility control.

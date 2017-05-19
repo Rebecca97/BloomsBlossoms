@@ -22,30 +22,39 @@ namespace BloomsandBlossoms {
         protected global::System.Web.UI.WebControls.DataList dlCart;
         
         /// <summary>
-        /// calculateTotalPrice control.
+        /// lblCalculateTotalPrice control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label calculateTotalPrice;
+        protected global::System.Web.UI.WebControls.Label lblCalculateTotalPrice;
         
         /// <summary>
-        /// calculateServiceTaxAmt control.
+        /// lblCalculateServiceTaxAmt control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label calculateServiceTaxAmt;
+        protected global::System.Web.UI.WebControls.Label lblCalculateServiceTaxAmt;
         
         /// <summary>
-        /// calculateNetTotalPrice control.
+        /// lblNetTotalPrice control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label calculateNetTotalPrice;
+        protected global::System.Web.UI.WebControls.Label lblNetTotalPrice;
+        
+        /// <summary>
+        /// buttonCheckout control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button buttonCheckout;
     }
 }

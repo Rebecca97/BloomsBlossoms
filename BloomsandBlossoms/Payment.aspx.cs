@@ -36,13 +36,13 @@ namespace BloomsandBlossoms
 
         protected void btnMakePayment_Click(object sender, EventArgs e)
         {
-           // PaymentDL paymentObj = new PaymentDL();
-           // paymentObj.CardNo = txtCardNo.Text;
-           // paymentObj.CVVNo = txtCVVNo.Text;
-            
-            
-            
-          
+            // PaymentDL paymentObj = new PaymentDL();
+            // paymentObj.CardNo = txtCardNo.Text;
+            // paymentObj.CVVNo = txtCVVNo.Text;
+
+            Response.Redirect("PaymentRequest.aspx");
+
+
         }
     }
 }

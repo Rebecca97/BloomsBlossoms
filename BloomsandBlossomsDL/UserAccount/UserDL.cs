@@ -307,5 +307,34 @@ namespace BloomsandBlossomsDL
             }
             return isvalid;
         }
+
+        public void GetUserByUserID(int userID)
+        {
+            try
+            {
+                Database db = DatabaseFactory.CreateDatabase(_myConnection.DatabaseName);
+                string sqlCommand = "spGetUserByUserID";
+                DbCommand dbCommand = db.GetStoredProcCommand(sqlCommand);
+                db.AddInParameter(dbCommand, "UserID", DbType.Int32, userID);
+
+                using (SqlDataReader dataReader = (SqlDataReader)db.ExecuteReader(dbCommand))
+                {
+                    while (dataReader.Read())
+                    {
+                        _userID = dataReader.GetInt32(dataReader.GetOrdinal("UserID"));
+                        _username = dataReader.GetString(dataReader.GetOrdinal("Username"));
+                        _emailID = dataReader.GetString(dataReader.GetOrdinal("EmailID"));
+                        _phonenumber = dataReader.GetString(dataReader.GetOrdinal("Phonenumber"));
+                        _isDelete = dataReader.GetBoolean(dataReader.GetOrdinal("IsDelete"));
+                        _isEmailVerified = dataReader.GetBoolean(dataReader.GetOrdinal("IsEmailVerified"));
+                    }
+                }                
+            }
+            catch (Exception ex)
+            {
+                ErrorLog.LogErrorMessageToDB("", "UserDL.cs", "GetUserByUserID", ex.Message.ToString(), _myConnection);
+                throw;
+            }
+        }
     }
 }

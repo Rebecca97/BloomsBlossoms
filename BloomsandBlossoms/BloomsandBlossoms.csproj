@@ -164,6 +164,7 @@
     <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="CorporateArrangement.aspx" />
     <Content Include="css\animate.css" />
     <Content Include="css\bootstrap.min.css" />
     <Content Include="css\font-awesome.min.css" />
@@ -177,6 +178,7 @@
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="Hotel.aspx" />
     <Content Include="Images\404\404.png" />
     <Content Include="Images\blog\blog-one.jpg" />
     <Content Include="Images\blog\blog-three.jpg" />
@@ -236,6 +238,7 @@
     <Content Include="Images\shop\product8.jpg" />
     <Content Include="Images\shop\product9.jpg" />
     <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\citrus.js" />
     <Content Include="js\contact.js" />
     <Content Include="js\gmaps.js" />
     <Content Include="js\html5shiv.js" />
@@ -250,6 +253,114 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Login.Master" />
     <Content Include="CartMaster.Master" />
+    <Content Include="PaymentRequest.aspx" />
+    <Content Include="PaymentResponse.aspx" />
+    <Content Include="productImages\co.png" />
+    <Content Include="productImages\co10.png" />
+    <Content Include="productImages\co11.png" />
+    <Content Include="productImages\co12.png" />
+    <Content Include="productImages\co13.png" />
+    <Content Include="productImages\co14.png" />
+    <Content Include="productImages\co15.png" />
+    <Content Include="productImages\co2.png" />
+    <Content Include="productImages\co3.png" />
+    <Content Include="productImages\co4.png" />
+    <Content Include="productImages\co5.png" />
+    <Content Include="productImages\co6.png" />
+    <Content Include="productImages\co7.png" />
+    <Content Include="productImages\co8.png" />
+    <Content Include="productImages\co9.png" />
+    <Content Include="productImages\hbf.png" />
+    <Content Include="productImages\hbf2.png" />
+    <Content Include="productImages\hbf3.png" />
+    <Content Include="productImages\hbf4.png" />
+    <Content Include="productImages\hbf5.png" />
+    <Content Include="productImages\hcf.png" />
+    <Content Include="productImages\hcf2.png" />
+    <Content Include="productImages\hcf3.png" />
+    <Content Include="productImages\hcf4.png" />
+    <Content Include="productImages\hcf5.png" />
+    <Content Include="productImages\hdf.png" />
+    <Content Include="productImages\hdf2.png" />
+    <Content Include="productImages\hdf3.png" />
+    <Content Include="productImages\hdf4.png" />
+    <Content Include="productImages\hdf5.png" />
+    <Content Include="productImages\hlf.png" />
+    <Content Include="productImages\hlf2.png" />
+    <Content Include="productImages\hlf3.png" />
+    <Content Include="productImages\hlf4.png" />
+    <Content Include="productImages\hlf5.png" />
+    <Content Include="productImages\hsf.png" />
+    <Content Include="productImages\hsf2.png" />
+    <Content Include="productImages\hsf3.png" />
+    <Content Include="productImages\hsf4.png" />
+    <Content Include="productImages\hsf5.png" />
+    <Content Include="productImages\wb.png" />
+    <Content Include="productImages\wb2.png" />
+    <Content Include="productImages\wb3.png" />
+    <Content Include="productImages\wb4.png" />
+    <Content Include="productImages\wb5.png" />
+    <Content Include="productImages\wbd.png" />
+    <Content Include="productImages\wbd2.png" />
+    <Content Include="productImages\wbd3.png" />
+    <Content Include="productImages\wbd4.png" />
+    <Content Include="productImages\wbd5.png" />
+    <Content Include="productImages\wc.png" />
+    <Content Include="productImages\wc2.png" />
+    <Content Include="productImages\wc3.png" />
+    <Content Include="productImages\wc4.png" />
+    <Content Include="productImages\wc5.png" />
+    <Content Include="productImages\wca.png" />
+    <Content Include="productImages\wca2.png" />
+    <Content Include="productImages\wca3.png" />
+    <Content Include="productImages\wca4.png" />
+    <Content Include="productImages\wca5.png" />
+    <Content Include="productImages\wfn.png" />
+    <Content Include="productImages\wfn2.png" />
+    <Content Include="productImages\wfn3.png" />
+    <Content Include="productImages\wfn4.png" />
+    <Content Include="productImages\wfn5.png" />
+    <Content Include="productImages\wg.png" />
+    <Content Include="productImages\wg2.png" />
+    <Content Include="productImages\wg3.png" />
+    <Content Include="productImages\wg4.png" />
+    <Content Include="productImages\wg5.png" />
+    <Content Include="productImages\ws1.png" />
+    <Content Include="productImages\ws10.png" />
+    <Content Include="productImages\ws11.png" />
+    <Content Include="productImages\ws12.png" />
+    <Content Include="productImages\ws13.png" />
+    <Content Include="productImages\ws14.png" />
+    <Content Include="productImages\ws15.png" />
+    <Content Include="productImages\ws16.png" />
+    <Content Include="productImages\ws17.png" />
+    <Content Include="productImages\ws18.png" />
+    <Content Include="productImages\ws19.png" />
+    <Content Include="productImages\ws2.png" />
+    <Content Include="productImages\ws20.png" />
+    <Content Include="productImages\ws21.png" />
+    <Content Include="productImages\ws22.png" />
+    <Content Include="productImages\ws23.png" />
+    <Content Include="productImages\ws24.png" />
+    <Content Include="productImages\ws25.png" />
+    <Content Include="productImages\ws26.png" />
+    <Content Include="productImages\ws27.png" />
+    <Content Include="productImages\ws28.png" />
+    <Content Include="productImages\ws29.png" />
+    <Content Include="productImages\ws3.png" />
+    <Content Include="productImages\ws30.png" />
+    <Content Include="productImages\ws31.png" />
+    <Content Include="productImages\ws32.png" />
+    <Content Include="productImages\ws4.png" />
+    <Content Include="productImages\ws5.png" />
+    <Content Include="productImages\ws6.png" />
+    <Content Include="productImages\ws7.png" />
+    <Content Include="productImages\ws8.png" />
+    <Content Include="productImages\ws9.png" />
+    <Content Include="RequestDemo.aspx" />
+    <Content Include="ResponseDemo.aspx" />
+    <Content Include="Wedding.aspx" />
+    <Content Include="hmac_signature.ashx" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Payment.aspx" />
     <Content Include="Product.aspx" />
@@ -367,6 +478,13 @@
     <Compile Include="ContactUs.aspx.designer.cs">
       <DependentUpon>ContactUs.aspx</DependentUpon>
     </Compile>
+    <Compile Include="CorporateArrangement.aspx.cs">
+      <DependentUpon>CorporateArrangement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CorporateArrangement.aspx.designer.cs">
+      <DependentUpon>CorporateArrangement.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -384,6 +502,16 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="hmac_signature.ashx.cs">
+      <DependentUpon>hmac_signature.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Hotel.aspx.cs">
+      <DependentUpon>Hotel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Hotel.aspx.designer.cs">
+      <DependentUpon>Hotel.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Login.Master.cs">
       <DependentUpon>Login.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -397,6 +525,20 @@
     </Compile>
     <Compile Include="Payment.aspx.designer.cs">
       <DependentUpon>Payment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentRequest.aspx.cs">
+      <DependentUpon>PaymentRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PaymentRequest.aspx.designer.cs">
+      <DependentUpon>PaymentRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentResponse.aspx.cs">
+      <DependentUpon>PaymentResponse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PaymentResponse.aspx.designer.cs">
+      <DependentUpon>PaymentResponse.aspx</DependentUpon>
     </Compile>
     <Compile Include="Product.aspx.cs">
       <DependentUpon>Product.aspx</DependentUpon>
@@ -412,6 +554,20 @@
     </Compile>
     <Compile Include="Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RequestDemo.aspx.cs">
+      <DependentUpon>RequestDemo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RequestDemo.aspx.designer.cs">
+      <DependentUpon>RequestDemo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ResponseDemo.aspx.cs">
+      <DependentUpon>ResponseDemo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ResponseDemo.aspx.designer.cs">
+      <DependentUpon>ResponseDemo.aspx</DependentUpon>
     </Compile>
     <Compile Include="Signin.aspx.cs">
       <DependentUpon>Signin.aspx</DependentUpon>
@@ -454,6 +610,13 @@
     </Compile>
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Wedding.aspx.cs">
+      <DependentUpon>Wedding.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Wedding.aspx.designer.cs">
+      <DependentUpon>Wedding.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

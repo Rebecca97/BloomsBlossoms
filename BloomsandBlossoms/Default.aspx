@@ -47,13 +47,14 @@
 										<asp:Image ID="Image1" runat="server" style="height:200px;width:160px;" ImageUrl='<%# Eval("PictureFileName") %>' />
 										<h2><%# Eval("ProductPrice")%></h2>
 										<p><b><%# Eval("ProductName") %></b></p>
-										<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+										<a href="../Description.aspx?productid=<%# Eval("ProductID") %>" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
 									</div>
 									<div class="product-overlay">
 										<div class="overlay-content">
 											<h2><%# Eval("ProductPrice")%></h2>
 											<p><%# Eval("ProductName") %></p>
-											<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                                            <a href="../Description.aspx?productid=<%# Eval("ProductID") %>" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+											
 										</div>
 									</div>
 								</div>
