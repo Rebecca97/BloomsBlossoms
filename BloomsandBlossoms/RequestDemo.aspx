@@ -159,7 +159,8 @@
              var allParams = req.concat(params.concat(signt));
              alert(allParams);
 
-             document.getElementById("frmPayment").action = allParams;
+             document.getElementById("frmPayment").action = req;
+             
              //"https://checkout.citruspay.com/ssl/checkout/2lp1owe1le?Name=Manjula&Address=Chennai&Email=manjula.thirugnanasambandam@gmail.com&Mobile=9894386345&Payment=1.00&merchantTxnId=201705190150201234&orderAmount=1.00&currency=INR&secSignature=" + signt;
              document.getElementById("frmPayment").submit();
          });

@@ -11,7 +11,14 @@ namespace BloomsandBlossoms
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["UserIDValue"] == null)
+            {
+                lblUsername.Text = "Login";
+            }
+            else
+            {
+                lblUsername.Text = Session["UserNameValue"].ToString();
+            }
         }
     }
 }

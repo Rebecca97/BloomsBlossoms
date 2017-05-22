@@ -23,27 +23,35 @@
                                 <div class="status alert alert-success" style="display: none"></div>
                                 <asp:HiddenField ID="hfAddressID" runat="server" Value="0" />
                                 <div class="form-group col-md-12">
+                                    <h4>Contact Name:</h4>
                                     <asp:TextBox ID="txtName" runat="server" class="form-control" required="required" placeholder="Contact Person Name"></asp:TextBox>
                                 </div>
                                 <div class="form-group col-md-6">
+                                <h4>Address Line 1:</h4>
                                     <asp:TextBox ID="txtAddress1" runat="server" class="form-control" required="required" placeholder="Address Line 1"></asp:TextBox>
                                 </div>
                                 <div class="form-group col-md-6">
+                                    <h4>Address Line 2:</h4>
                                     <asp:TextBox ID="txtAddress2" runat="server" class="form-control" required="required" placeholder="Address Line 2"></asp:TextBox>
                                 </div>
                                 <div class="form-group col-md-12">
+                                    <h4>City:</h4>
                                     <asp:TextBox ID="txtCity" runat="server" class="form-control" required="required" placeholder="City"></asp:TextBox>
                                 </div>
                                 <div class="form-group col-md-12">
+                                    <h4>State:</h4>
                                     <asp:TextBox ID="txtState" runat="server" required="required" class="form-control" placeholder="State"></asp:TextBox>
                                 </div>
                                 <div class="form-group col-md-12">
+                                    <h4>Country:</h4>
                                     <asp:TextBox ID="txtCountry" runat="server" required="required" class="form-control" placeholder="Country"></asp:TextBox>
                                 </div>
                                  <div class="form-group col-md-12">
+                                     <h4>Pin Code:</h4>
                                     <asp:TextBox ID="txtPin" runat="server" required="required" class="form-control" placeholder="Pin Code"></asp:TextBox>
                                 </div>
                                  <div class="form-group col-md-12">
+                                     <h4>Note:</h4>
                                     <asp:TextBox ID="txtNote" runat="server" required="required" class="form-control" placeholder="Note"></asp:TextBox>
                                 </div>
                                 <div class="form-group col-md-4">

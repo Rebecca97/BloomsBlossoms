@@ -21,6 +21,7 @@
                                 <tbody>
                                     <tr>
                                         <td class="cart_product">
+                                            <asp:HiddenField ID="hfCartID" runat="server" Value="0" />
                                             <a href="../Description.aspx?productid=<%# Eval("ProductID")%>">
                                                 <asp:Image ID="Image1" runat="server" ImageUrl="#" /></a>
                                         </td>
