@@ -32,12 +32,12 @@
                             <asp:TextBox ID="txtQuantity" runat="server" Text="1" MaxLength="1"></asp:TextBox>
 
                             
-                            <asp:Button ID="btnAddCart" runat="server" Text="Add" ValidationGroup="CartGroup" OnClick="btnsubmit_Click" />
+                            <asp:Button ID="btnAddCart" runat="server" Text="Add To Cart" ValidationGroup="CartGroup" OnClick="btnsubmit_Click" />
 
                             <i class="fa fa-shopping-cart"></i>
 
                         </span>
-                        <p><b>Availability:</b><asp:Label ID="productavailibility" runat="server" Text="0"></asp:Label></p>
+                        <p><b>Availability:</b><asp:Label ID="productavailibility" runat="server" Text=""></asp:Label></p>
                         <a href="#">
                             <img src="images/product-details/share.png" class="share img-responsive" alt="" /></a>
                     </div>

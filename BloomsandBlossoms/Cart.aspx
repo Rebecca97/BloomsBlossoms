@@ -119,6 +119,16 @@
     <script src="js/jquery.scrollUp.min.js"></script>
     <script src="js/jquery.prettyPhoto.js"></script>
     <script src="js/main.js"></script>
-
+     <%--<form align="center" method="post" action="<%=formPostUrl%>">
+       <input type="hidden" id="merchantTxnId" name="merchantTxnId" value="<%=merchantTxnId%>" />
+       <input type="hidden" id="orderAmount" name="orderAmount" value="<%=orderAmount%>" />
+       <input type="hidden" id="currency" name="currency" value="<%=currency%>" />
+       <input type="text" id="email" name="email" value="someone@validemail.com" />
+       <input type="text" id="phoneNumber" name="phoneNumber" value="9812309816" />        
+       <input type="hidden" name="returnUrl" value="http://www.abc.com/return-url" />
+       <input type="hidden" id="notifyUrl" name="notifyUrl" value="https://www.abc.com/notify-me" />
+       <input type="hidden" id="secSignature" name="secSignature" value="<%=securitySignature%>" />
+       <input type="Submit" value="Pay Now"/>
+     </form> --%>
 
 </asp:Content>

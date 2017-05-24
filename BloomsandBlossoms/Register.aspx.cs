@@ -24,7 +24,7 @@ namespace BloomsandBlossoms
         {
             UserDL userObj = new UserDL();
             userObj.Username = txtUserName.Text;
-            userObj.Password = txtPassword.Text;
+            userObj.Password = Utilities.EncryptText(txtPassword.Text);
             userObj.EmailID = txtEmailID.Text;
             userObj.Phonenumber = txtPhoneNumber.Text;
 

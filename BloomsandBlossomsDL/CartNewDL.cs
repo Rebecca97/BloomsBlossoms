@@ -120,7 +120,7 @@ namespace BloomsandBlossomsDL
         private TransactionResult DeleteFromCart(Database db, DbTransaction transaction)
         {
             int returnValue = 0;
-            string sqlCommand = "spDeleteFromCart";
+            string sqlCommand = "spDeleteFromCartProducts";
             DbCommand dbCommand = db.GetStoredProcCommand(sqlCommand);
 
             db.AddInParameter(dbCommand, "UserID", DbType.Int32, UserID);

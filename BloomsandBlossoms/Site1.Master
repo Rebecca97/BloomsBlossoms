@@ -103,9 +103,9 @@
 								<%--<li><a href="#"><i class="fa fa-user"></i> Account</a></li>
 								<li><a href="#"><i class="fa fa-star"></i> Wishlist</a></li>--%>
 								<li><a href="Cart.aspx"><i class="fa fa-crosshairs"></i> Checkout</a></li>
-								<li><a href="Cart.aspx"><i class="fa fa-shopping-cart"></i> Cart</a></li>
+								<li><a href="Cart.aspx"><i class="fa fa-shopping-cart"></i> Cart <asp:Label runat="server" ID="lblCartQuantity" Text=""></asp:Label></a></li>
 								<li><a href="SignIn.aspx"><i class="fa fa-lock"></i> <asp:Label runat="server" ID="lblUsername" Text=""></asp:Label></a></li>
-                                
+                                <li><asp:LinkButton runat="server" ID="lblLogout" Text="Log Out" cssClass="fa fa-lock" OnClick="lblLogout_Click"></asp:LinkButton></li>
 							</ul>
 						</div>
 					</div>

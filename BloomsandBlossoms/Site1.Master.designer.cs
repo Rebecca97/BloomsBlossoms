@@ -22,6 +22,15 @@ namespace BloomsandBlossoms {
         protected global::System.Web.UI.WebControls.ContentPlaceHolder HeadContent;
         
         /// <summary>
+        /// lblCartQuantity control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblCartQuantity;
+        
+        /// <summary>
         /// lblUsername control.
         /// </summary>
         /// <remarks>
@@ -29,6 +38,15 @@ namespace BloomsandBlossoms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblUsername;
+        
+        /// <summary>
+        /// lblLogout control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton lblLogout;
         
         /// <summary>
         /// mainpageholder control.

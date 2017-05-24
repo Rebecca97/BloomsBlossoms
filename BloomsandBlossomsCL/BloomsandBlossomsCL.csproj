@@ -60,6 +60,7 @@
     <Compile Include="GridViewProperties.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TransactionResult.cs" />
+    <Compile Include="Utilities.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="ApplicationBlock\Microsoft.Practices.EnterpriseLibrary.Common.dll" />

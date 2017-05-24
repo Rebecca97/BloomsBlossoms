@@ -208,17 +208,18 @@ namespace BloomsandBlossomsDL
             string sqlCommand = "spInsertIntoCartProducts";
             DbCommand dbCommand = db.GetStoredProcCommand(sqlCommand);
 
-            db.AddInParameter(dbCommand, "CartID", DbType.Int32, _cartID);
-            db.AddInParameter(dbCommand, "ProductID", DbType.String, _productID);
-            db.AddInParameter(dbCommand, "ProductPrice", DbType.String, ProductPrice);
-            db.AddInParameter(dbCommand, "ProductQuantity", DbType.String, _quantity);
+            
+            db.AddInParameter(dbCommand, "UserID", DbType.Int32, UserID);
+            db.AddInParameter(dbCommand, "ProductID", DbType.Int32, ProductID);
+            db.AddInParameter(dbCommand, "ProductPrice", DbType.Decimal, ProductPrice);
+            db.AddInParameter(dbCommand, "ProductQuantity", DbType.Int32, ProductQuantity);
             db.AddParameter(dbCommand, "Return Value", DbType.Int32, ParameterDirection.ReturnValue, "Return Value",
                             DataRowVersion.Default, returnValue);
 
             db.ExecuteNonQuery(dbCommand, transaction);
             returnValue = (Int32)db.GetParameterValue(dbCommand, "Return Value");
 
-            CartID = returnValue;
+            //CartID = returnValue;
 
             if (returnValue == -1)
             {

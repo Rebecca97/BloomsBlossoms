@@ -27,13 +27,12 @@ namespace BloomsandBlossoms
         {
             UserDL userObj = new UserDL();
             userObj.Username = txtGetUserName.Text;
-            userObj.Password = txtGetPassword.Text;
+            userObj.Password = Utilities.EncryptText(txtGetPassword.Text);
             if(userObj.IsUserExists())
             {
 	            Session["UserIDValue"] = userObj.UserID;
 	            Session["UserNameValue"] = userObj.Username;
-
-                Response.Redirect("~/Default.aspx");
+               Response.Redirect("~/Default.aspx");
             }
             else
             {
@@ -44,10 +43,11 @@ namespace BloomsandBlossoms
 
 
         protected void btnSubmit_Click(object sender, EventArgs e)
-        {
+        {            
+            string strpass = Utilities.EncryptText(txtPassword.Text);
             UserDL userObj = new UserDL();
             userObj.Username = txtUserName.Text;
-            userObj.Password = txtPassword.Text;
+            userObj.Password = strpass;
             userObj.EmailID = txtEmailID.Text;
             userObj.Phonenumber = txtPhoneNumber.Text;
 
@@ -77,7 +77,7 @@ namespace BloomsandBlossoms
             //ScriptManager.RegisterStartupScript(this.Page, typeof(string), "MyScript", sb.ToString(), false);
 
         }
-
+       
         protected void btnReset_Click(object sender, EventArgs e)
         {
             txtUserName.Text = string.Empty;

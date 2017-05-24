@@ -14,61 +14,61 @@ namespace BloomsandBlossoms
         DescriptionDL objDes = new DescriptionDL();
         protected void Page_Load(object sender, EventArgs e)
         {
-            if(!IsPostBack)
+            if (!IsPostBack)
             {
-                if(Session["UserIDValue"] == null)
+                if (Session["UserIDValue"] == null)
                 {
                     Response.Redirect("~/Signin.aspx");
-                }                    
+                }
 
                 string queryStringValue = Request.QueryString["productid"];
 
-                
+
                 objDes.GetProductDescriptionByProductID(Convert.ToInt32(queryStringValue));
                 productname.Text = objDes.ProductName;
                 productid.Text = objDes.ProductID.ToString();
                 productdescription.Text = objDes.ProductDescription;
-                productprice.Text =objDes.ProductPrice.ToString();
+                productprice.Text = objDes.ProductPrice.ToString();
                 productavailibility.Text = objDes.IsEnable.ToString();
                 imgproductpicture.ImageUrl = objDes.PictureFileName;
             }
-              
+
         }
-       
+
         protected void btnsubmit_Click(object sender, EventArgs e)
         {
-            List<DescriptionDL> cartDetails;
-            DescriptionDL addItem = new DescriptionDL();
-            if (Session["CartDetails"]==null)
-            {
-                cartDetails = new List<DescriptionDL>();
-                
-            }
-            else
-            {
-                cartDetails = (List<DescriptionDL>)Session["CartDetails"];
-                //bool alreadyexists = cartDetails.Contains();
+            //List<DescriptionDL> cartDetails;
+            //DescriptionDL addItem = new DescriptionDL();
+            //if (Session["CartDetails"]==null)
+            //{
+            //    cartDetails = new List<DescriptionDL>();
 
-                //if (alreadyexists)
-                //{
-                //    int newQuantity = Convert.ToInt32(txtQuantity.Text);
-                //    newQuantity = newQuantity + 1;
+            //}
+            //else
+            //{
+            //cartDetails = (List<DescriptionDL>)Session["CartDetails"];
+            //bool alreadyexists = cartDetails.Contains();
 
-                //    addItem.ProductID = Convert.ToInt32(productid.Text);
-                //    addItem.ProductPrice = Convert.ToDecimal(productprice.Text);
-                //    addItem.ProductQuantity = newQuantity;
-                //    cartDetails.Add(addItem);
-                //    Session["CartDetails"] = cartDetails;
+            //if (alreadyexists)
+            //{
+            //    int newQuantity = Convert.ToInt32(txtQuantity.Text);
+            //    newQuantity = newQuantity + 1;
 
-                //}
-                //cartDetails.Remove(addItem.ProductID = );
-            }
+            //    addItem.ProductID = Convert.ToInt32(productid.Text);
+            //    addItem.ProductPrice = Convert.ToDecimal(productprice.Text);
+            //    addItem.ProductQuantity = newQuantity;
+            //    cartDetails.Add(addItem);
+            //    Session["CartDetails"] = cartDetails;
 
-            addItem.ProductID = Convert.ToInt32(productid.Text);
-            addItem.ProductPrice = Convert.ToDecimal(productprice.Text);
-            addItem.ProductQuantity = Convert.ToInt32(txtQuantity.Text);
-            cartDetails.Add(addItem);
-            Session["CartDetails"] = cartDetails;
+            //}
+            //cartDetails.Remove(addItem.ProductID = );
+            //}
+
+            //    addItem.ProductID = Convert.ToInt32(productid.Text);
+            //addItem.ProductPrice = Convert.ToDecimal(productprice.Text);
+            //addItem.ProductQuantity = Convert.ToInt32(txtQuantity.Text);
+            //cartDetails.Add(addItem);
+            //Session["CartDetails"] = cartDetails;
             //if (hfCartID.Value == "0")
             //{
             //    objDes.CartID = 0;
@@ -80,20 +80,22 @@ namespace BloomsandBlossoms
 
             //}
 
-            //objDes.UserID = Convert.ToInt32(Session["UserIDValue"]);
+            objDes.UserID = Convert.ToInt32(Session["UserIDValue"]);
             //objDes.CartID = Convert.ToInt32(Session["CartDetails"]);
-            //objDes.ProductID = Convert.ToInt32(Session["CartDetails"]);
-            //objDes.ProductPrice = Convert.ToDecimal(Session["CartDetails"]);
-            //objDes.Quantity = Convert.ToInt32(Session["CartDetails"]);
+            objDes.ProductID = Convert.ToInt32(productid.Text);
+            objDes.ProductPrice = Convert.ToDecimal(productprice.Text);
+            objDes.ProductQuantity = Convert.ToInt32(txtQuantity.Text);
 
-            //TransactionResult result;
-            //objDes.ScreenMode = ScreenMode.Add;
-            //result = objDes.Commit();
-            //hfCartID.Value = objDes.CartID.ToString();
+            TransactionResult result;
+            objDes.ScreenMode = ScreenMode.Add;
+            result = objDes.Commit();
 
+            if (Session["CartQuantity"] != null)
+                Session["CartQuantity"] = Convert.ToInt32(txtQuantity.Text) + Convert.ToInt32(Session["CartQuantity"]);
+            else
+                Session["CartQuantity"] = Convert.ToInt32(txtQuantity.Text);
 
-
-            //Response.Redirect("~/Default.aspx");
+            Response.Redirect("~/Default.aspx");
         }
     }
 }

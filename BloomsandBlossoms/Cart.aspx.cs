@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Text;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -27,15 +28,14 @@ namespace BloomsandBlossoms
             }
 
             CartNewDL cartobj = new CartNewDL();
-            if(Session["CartDetails"]!=null)
-            {
-                dlCart.DataSource = (List<DescriptionDL>)Session["CartDetails"];
+            
+                dlCart.DataSource = cartobj.GetCartDetailsWithUserID(Convert.ToInt32(Session["UserIDValue"]));
                 dlCart.DataBind();
                 lblCalculateTotalPrice.Text = calculateProductPrice.ToString("F2");
                 calculateServiceTax = calculateProductPrice * 0.15;
                 lblCalculateServiceTaxAmt.Text = calculateServiceTax.ToString("F2");
                 lblNetTotalPrice.Text = (calculateProductPrice + calculateServiceTax).ToString("F2");
-            }
+            
         }
 
         protected bool StoreProductsIntoDB()
@@ -106,25 +106,20 @@ namespace BloomsandBlossoms
 
         protected void btnsubmit_Click(object sender, EventArgs e)
         {
-            //CartDL cartobj1 = new CartDL();
-            //cartobj1.UserID = Convert.ToInt32(Session["UserIDValue"]);
-            //Button btn = sender as Button;
-            //DataListItem dli = btn.NamingContainer as DataListItem;
-            //Label lbl = dli.FindControl("productid") as Label;
-            //cartobj1.ProductID = 0;
-            //if (lbl != null)
-            //{
-            //    cartobj1.ProductID = Convert.ToInt32(lbl.Text);
-            //}
+            CartDL cartobj1 = new CartDL();
+            cartobj1.UserID = Convert.ToInt32(Session["UserIDValue"]);
+            Button btn = sender as Button;
+            DataListItem dli = btn.NamingContainer as DataListItem;
+            Label lbl = dli.FindControl("productid") as Label;
+            cartobj1.ProductID = 0;
+            if (lbl != null)
+            {
+                cartobj1.ProductID = Convert.ToInt32(lbl.Text);
+            }
 
-            //TransactionResult result;
-            //cartobj1.ScreenMode = ScreenMode.Delete;
-            //result = cartobj1.Commit();
-           
-
-
-
-           
+            TransactionResult result;
+            cartobj1.ScreenMode = ScreenMode.Delete;
+            result = cartobj1.Commit();
         }
 
         protected void dlCart_SelectedIndexChanged(object sender, EventArgs e)
@@ -139,7 +134,27 @@ namespace BloomsandBlossoms
 
             //    StoreProductsIntoDB();
             //}
-            Response.Redirect("Payment.aspx");
+            //Response.Redirect("Payment.aspx");
+
+            //Need to replace the last part of URL("your-vanityUrlPart") with your Testing/Live URL
+            string formPostUrl = "https://checkout.citruspay.com/ssl/checkout/2lp1owe1le";               
+            //Need to change with your Secret Key
+            string secret_key = "87851b4fda1d3aa96edad6a7053f889d867a3c54";
+            //Need to change with your Vanity URL Key from the citrus panel
+            string vanityUrl = "2lp1owe1le";
+            //Should be unique for every transaction
+            string merchantTxnId = "BAB"+ System.DateTime.Now.ToString("yyyyMMddHHmmssffff");
+            //Need to change with your Order Amount
+            string orderAmount = "5.00";
+            string currency = "INR";
+            string data = vanityUrl + orderAmount + merchantTxnId + currency;
+            string returnUrl = "http://localhost:50544/ResponseDemo.aspx";
+            string notifyUrl = "";
+            System.Security.Cryptography.HMACSHA1 myhmacsha1 = new System.Security.Cryptography.HMACSHA1(Encoding.ASCII.GetBytes(secret_key));
+            System.IO.MemoryStream stream = new System.IO.MemoryStream(Encoding.ASCII.GetBytes(data));
+            string securitySignature = BitConverter.ToString(myhmacsha1.ComputeHash(stream)).Replace("-", "").ToLower();
+
+            Response.Redirect(formPostUrl);
 
         }
     }
