@@ -15,7 +15,7 @@
             </div>
             <div class="table-responsive cart_info">
                     
-                        <asp:DataList ID="dlCart" runat="server" CssClass="table table-condensed" RepeatColumns="1" CellSpacing="3" RepeatLayout="Table" OnItemDataBound="dlCart_ItemDataBound" OnSelectedIndexChanged="dlCart_SelectedIndexChanged">
+                        <asp:DataList ID="dlCart" runat="server" DataKeyField="ProductID" OnDeleteCommand="dlCart_DeleteCommand" CssClass="table table-condensed" RepeatColumns="1" CellSpacing="3" RepeatLayout="Table" OnItemDataBound="dlCart_ItemDataBound" OnSelectedIndexChanged="dlCart_SelectedIndexChanged">
                             <ItemTemplate>
 
                                 <tbody>
@@ -26,7 +26,7 @@
                                                 <asp:Image ID="Image1" runat="server" ImageUrl="#" /></a>
                                         </td>
                                         <td class="cart_description">
-                                            <h4><asp:Label ID="lblProductName" runat="server" CssClass="cart_quantity_input" Text=""></asp:Label></h4>
+                                            <h4><asp:Label ID="lblProductName" runat="server" CssClass="cart_quantity_input" Text=""></asp:Label></h4><br />
                                             <p><asp:Label ID="productid" runat="server" Text=<%# Eval("ProductID")%>></asp:Label></p>
                                         </td>
                                         <td class="cart_price">
@@ -44,8 +44,7 @@
                                             <asp:Label ID="lblTotalProductPrice" runat="server" CssClass="cart_total_price" Text=""></asp:Label>
                                         </td>
                                         <td class="cart_delete">
-                                            <asp:Button ID="btnDelete" runat="server" CssClass="cart_quantity_delete" OnClick="btnsubmit_Click" />
-                                            <i class="fa fa-times"></i></a>
+                                             <asp:LinkButton ID="lbtnDelete" runat="server" CommandName="delete" class="cart_quantity_delete"><i class="fa fa-times"></i></asp:LinkButton>
                                         </td>
                                     </tr>
                                 </tbody>
@@ -55,9 +54,9 @@
                                     <tr class="cart_menu">
                                         <td class="image">Item</td>
                                         <td class="description"></td>
-                                        <td class="price">Price</td>
+                                        <td class="price">Price (Rs.)</td>
                                         <td class="quantity">Quantity</td>
-                                        <td class="total">Total</td>
+                                        <td class="total">Total (Rs.)</td>
                                         <td></td>
                                     </tr>
                                 </thead>
@@ -100,12 +99,12 @@
                 <div class="col-sm-6">
                     <div class="total_area">
                         <ul>
-                            <li>Cart Sub Total <span><asp:Label ID="lblCalculateTotalPrice" runat="server" Text="0"></asp:Label></span></li>
-                            <li>Service Tax <span><asp:Label ID="lblCalculateServiceTaxAmt" runat="server" Text="0"></asp:Label></span></li>
+                            <li>Cart Sub Total (Rs.) <span><asp:Label ID="lblCalculateTotalPrice" runat="server" Text="0"></asp:Label></span></li>
+                            <li>Service Tax (Rs.) <span><asp:Label ID="lblCalculateServiceTaxAmt" runat="server" Text="0"></asp:Label></span></li>
                             <!--<li>Shipping Cost <span>Free</span></li>-->
-                            <li>Total <span><asp:Label ID="lblNetTotalPrice" runat="server" Text="0"></asp:Label></span></li>
+                            <li>Total (Rs.) <span><asp:Label ID="lblNetTotalPrice" runat="server" Text="0"></asp:Label></span></li>
                         </ul>
-                       <asp:Button class="btn btn-default check_out" value="Checkout" Text="Checkout" runat="server" EnableViewState="true" ID="buttonCheckout" OnClick="btnCheckout_Click" />
+                       <asp:Button class="btn btn-default check_out" value="Checkout" Text="Continue to checkout" runat="server" EnableViewState="true" ID="buttonCheckout" OnClick="btnCheckout_Click" />
                         
                     </div>
                 </div>

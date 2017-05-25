@@ -18,14 +18,10 @@
                                     <asp:RadioButton ID="radioCOD" runat="server" class="form-control" GroupName="paymentmode" Text="Cash on Delivery(COD)"></asp:RadioButton>
                                 </div>
                                 <div class="form-group col-md-12">
-                                    <asp:RadioButton ID="radioCreditDebit" runat="server" class="form-control" GroupName="paymentmode" Text="Credit or Debit Card"></asp:RadioButton>
-                                </div>
-                                <div class="form-group col-md-12">
-                                    <asp:RadioButton ID="radioNetBank" runat="server" class="form-control" GroupName="paymentmode" Text="NetBanking"></asp:RadioButton>
+                                    <asp:RadioButton ID="radioOtherPayment" runat="server" class="form-control" GroupName="paymentmode" Text="Other Payment option"></asp:RadioButton>
                                 </div>
                                 <div class="form-group col-md-4">
-
-                                    <asp:Button class="btn btn-primary pull-right" value="Proceed" Text="Proceed" runat="server" EnableViewState="true" ID="buttonProceed" OnClick="btnProceed_Click" />
+                                <asp:Button class="btn btn-primary pull-right" value="Proceed" Text="Proceed" runat="server" EnableViewState="true" ID="buttonProceed" OnClick="btnProceed_Click" />
                                 </div>
                             </div>
                         </div>

@@ -19,7 +19,7 @@ namespace BloomsandBlossoms
 
         protected void btnProceed_Click(object sender, EventArgs e)
         {
-            if(radioCreditDebit.Checked)
+            if(radioOtherPayment.Checked)
             {
                 MultiView1.ActiveViewIndex = 1;
             }
@@ -27,11 +27,6 @@ namespace BloomsandBlossoms
             {
                 Response.Redirect("~/Address.aspx");
             }
-            else if(radioNetBank.Checked)
-            {
-                Response.Redirect("~/Default.aspx");
-            }
-
         }
 
         protected void btnMakePayment_Click(object sender, EventArgs e)

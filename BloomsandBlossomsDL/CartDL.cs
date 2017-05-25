@@ -125,11 +125,11 @@ namespace BloomsandBlossomsDL
         private TransactionResult DeleteFromCart(Database db, DbTransaction transaction)
         {
             int returnValue = 0;
-            string sqlCommand = "spDeleteFromCart";
+            string sqlCommand = "spDeleteFromCartProducts";
             DbCommand dbCommand = db.GetStoredProcCommand(sqlCommand);
             
             db.AddInParameter(dbCommand, "UserID", DbType.Int32, UserID);
-            db.AddInParameter(dbCommand, "ProductID", DbType.String, _productID);
+            db.AddInParameter(dbCommand, "ProductID", DbType.Int32, _productID);
            
             db.AddParameter(dbCommand, "Return Value", DbType.Int32, ParameterDirection.ReturnValue, "Return Value",
                             DataRowVersion.Default, returnValue);

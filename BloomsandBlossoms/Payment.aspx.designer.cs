@@ -49,22 +49,13 @@ namespace BloomsandBlossoms {
         protected global::System.Web.UI.WebControls.RadioButton radioCOD;
         
         /// <summary>
-        /// radioCreditDebit control.
+        /// radioOtherPayment control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton radioCreditDebit;
-        
-        /// <summary>
-        /// radioNetBank control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton radioNetBank;
+        protected global::System.Web.UI.WebControls.RadioButton radioOtherPayment;
         
         /// <summary>
         /// buttonProceed control.

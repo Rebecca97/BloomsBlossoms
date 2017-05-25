@@ -238,7 +238,7 @@ namespace BloomsandBlossomsDL
             {
                 while (dataReader.Read())
                 {
-
+                    AddressID = dataReader.GetInt32(dataReader.GetOrdinal("AddressID"));
                     ContactName = dataReader.GetString(dataReader.GetOrdinal("ContactName"));
                     Address1 = dataReader.GetString(dataReader.GetOrdinal("AddressLine1"));
                     Address2 = dataReader.GetString(dataReader.GetOrdinal("AddressLine2"));

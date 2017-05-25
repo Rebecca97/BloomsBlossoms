@@ -106,20 +106,27 @@ namespace BloomsandBlossoms
 
         protected void btnsubmit_Click(object sender, EventArgs e)
         {
-            CartDL cartobj1 = new CartDL();
-            cartobj1.UserID = Convert.ToInt32(Session["UserIDValue"]);
-            Button btn = sender as Button;
-            DataListItem dli = btn.NamingContainer as DataListItem;
-            Label lbl = dli.FindControl("productid") as Label;
-            cartobj1.ProductID = 0;
-            if (lbl != null)
-            {
-                cartobj1.ProductID = Convert.ToInt32(lbl.Text);
-            }
+            
+        }
 
+        protected void dlCart_DeleteCommand(object source, DataListCommandEventArgs e)
+        {
+            CartDL cartobj1 = new CartDL();
+            cartobj1.UserID = Convert.ToInt32(Session["UserIDValue"]);            
+            cartobj1.ProductID = (int)dlCart.DataKeys[(int)e.Item.ItemIndex];
+            
             TransactionResult result;
             cartobj1.ScreenMode = ScreenMode.Delete;
             result = cartobj1.Commit();
+            dlCart.EditItemIndex = -1;
+
+
+            dlCart.DataSource = cartobj1.GetCartDetailsWithUserID(Convert.ToInt32(Session["UserIDValue"]));
+            dlCart.DataBind();
+            lblCalculateTotalPrice.Text = calculateProductPrice.ToString("F2");
+            calculateServiceTax = calculateProductPrice * 0.15;
+            lblCalculateServiceTaxAmt.Text = calculateServiceTax.ToString("F2");
+            lblNetTotalPrice.Text = (calculateProductPrice + calculateServiceTax).ToString("F2");
         }
 
         protected void dlCart_SelectedIndexChanged(object sender, EventArgs e)
@@ -129,32 +136,33 @@ namespace BloomsandBlossoms
 
         protected void btnCheckout_Click(object sender, EventArgs e)
         {
-            //if (Session["CartDetails"] != null)
-            //{
+            ////if (Session["CartDetails"] != null)
+            ////{
 
-            //    StoreProductsIntoDB();
-            //}
-            //Response.Redirect("Payment.aspx");
+            ////    StoreProductsIntoDB();
+            ////}
+            ////Response.Redirect("Payment.aspx");
 
-            //Need to replace the last part of URL("your-vanityUrlPart") with your Testing/Live URL
-            string formPostUrl = "https://checkout.citruspay.com/ssl/checkout/2lp1owe1le";               
-            //Need to change with your Secret Key
-            string secret_key = "87851b4fda1d3aa96edad6a7053f889d867a3c54";
-            //Need to change with your Vanity URL Key from the citrus panel
-            string vanityUrl = "2lp1owe1le";
-            //Should be unique for every transaction
-            string merchantTxnId = "BAB"+ System.DateTime.Now.ToString("yyyyMMddHHmmssffff");
-            //Need to change with your Order Amount
-            string orderAmount = "5.00";
-            string currency = "INR";
-            string data = vanityUrl + orderAmount + merchantTxnId + currency;
-            string returnUrl = "http://localhost:50544/ResponseDemo.aspx";
-            string notifyUrl = "";
-            System.Security.Cryptography.HMACSHA1 myhmacsha1 = new System.Security.Cryptography.HMACSHA1(Encoding.ASCII.GetBytes(secret_key));
-            System.IO.MemoryStream stream = new System.IO.MemoryStream(Encoding.ASCII.GetBytes(data));
-            string securitySignature = BitConverter.ToString(myhmacsha1.ComputeHash(stream)).Replace("-", "").ToLower();
+            ////Need to replace the last part of URL("your-vanityUrlPart") with your Testing/Live URL
+            ////string formPostUrl = "https://checkout.citruspay.com/ssl/checkout/2lp1owe1le";               
+            ////Need to change with your Secret Key
+            //string secret_key = "87851b4fda1d3aa96edad6a7053f889d867a3c54";
+            ////Need to change with your Vanity URL Key from the citrus panel
+            //string vanityUrl = "2lp1owe1le";
+            ////Should be unique for every transaction
+            //string merchantTxnId = "BAB"+ System.DateTime.Now.ToString("yyyyMMddHHmmssffff");
+            ////Need to change with your Order Amount
+            //string orderAmount = "5.00";
+            //string currency = "INR";
+            //string data = vanityUrl + orderAmount + merchantTxnId + currency;
+            //string returnUrl = "http://localhost:50544/ResponseDemo.aspx";
+            //string notifyUrl = "";
+            //System.Security.Cryptography.HMACSHA1 myhmacsha1 = new System.Security.Cryptography.HMACSHA1(Encoding.ASCII.GetBytes(secret_key));
+            //System.IO.MemoryStream stream = new System.IO.MemoryStream(Encoding.ASCII.GetBytes(data));
+            //string securitySignature = BitConverter.ToString(myhmacsha1.ComputeHash(stream)).Replace("-", "").ToLower();
 
-            Response.Redirect(formPostUrl);
+            //Response.Redirect(formPostUrl);
+            Response.Redirect("~/Address.aspx");
 
         }
     }

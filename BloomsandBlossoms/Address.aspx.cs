@@ -26,7 +26,7 @@ namespace BloomsandBlossoms
                 string sessionUserIDValue = Session["UserIDValue"].ToString();
 
                 addressObj.GetAddressDetailsByUserID(Convert.ToInt32(sessionUserIDValue));
-
+                hfAddressID.Value=addressObj.AddressID.ToString();
                 txtName.Text = addressObj.ContactName;
                 txtAddress1.Text = addressObj.Address1;
                 txtAddress2.Text = addressObj.Address2;

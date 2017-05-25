@@ -29,13 +29,8 @@
                             <span>
                                 <asp:Label ID="productprice" runat="server" Text="0"></asp:Label></span>
                             <label>Quantity:</label>
-                            <asp:TextBox ID="txtQuantity" runat="server" Text="1" MaxLength="1"></asp:TextBox>
-
-                            
-                            <asp:Button ID="btnAddCart" runat="server" Text="Add To Cart" ValidationGroup="CartGroup" OnClick="btnsubmit_Click" />
-
-                            <i class="fa fa-shopping-cart"></i>
-
+                            <asp:TextBox ID="txtQuantity" runat="server" Text="1" MaxLength="1"></asp:TextBox>                           
+                            <asp:LinkButton ID="lbtnaddcard" runat="server"  ValidationGroup="CartGroup" OnClick="btnsubmit_Click" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</asp:LinkButton>
                         </span>
                         <p><b>Availability:</b><asp:Label ID="productavailibility" runat="server" Text=""></asp:Label></p>
                         <a href="#">
